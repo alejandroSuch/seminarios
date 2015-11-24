@@ -7,8 +7,9 @@ var Animal_1 = require('./Animal');
 var Dog = (function (_super) {
     __extends(Dog, _super);
     function Dog() {
-        _super.call(this, 'Dog');
+        _super.call(this, 'Dog', 1);
     }
     return Dog;
-})(Animal_1["default"]);
-exports["default"] = Dog;
+})(Animal_1.default);
+exports.default = Dog;
+//# sourceMappingURL=Dog.js.map

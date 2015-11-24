@@ -1,8 +1,10 @@
 export default class Animal {
   name: string;
+  age: number;
 
-  constructor(name) {
+  constructor(name, age) {
     this.name = name;
+    this.age = age;
   }
 
   public greet():void {

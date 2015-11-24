@@ -1,6 +1,7 @@
 var Animal = (function () {
-    function Animal(name) {
+    function Animal(name, age) {
         this.name = name;
+        this.age = age;
     }
     Animal.prototype.greet = function () {
         var msg = "Hello, I'm a " + this.name;
@@ -8,4 +9,5 @@ var Animal = (function () {
     };
     return Animal;
 })();
-exports["default"] = Animal;
+exports.default = Animal;
+//# sourceMappingURL=Animal.js.map
