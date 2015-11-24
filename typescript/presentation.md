@@ -2,7 +2,7 @@
 
 <i class="fa fa-smile-o"></i> Alejandro Such Berenguer
 
-<i class="fa fa-envelope-o"></i> alejandro.such@gmail.com
+<i class="fa fa-envelope-o"></i> alejandro.such@gcloud.ua.es
 
 <i class="fa fa-twitter"></i> @alejandro_such
 
