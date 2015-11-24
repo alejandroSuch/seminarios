@@ -194,4 +194,4 @@ El código es un poco chungo, no?
 Sourcemaps!
 
 
-<img src="./img/debug.png" style="max-width: 100% !important;" />
+<img src="./img/debug.png" style="max-width: 100% !important; max-height: 100% !important;" />
