@@ -337,6 +337,7 @@ class Invoice {
 }
 ```
 
+
 Una clase tiene:
 
  - Propiedades
