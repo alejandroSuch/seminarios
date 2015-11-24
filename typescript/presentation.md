@@ -845,7 +845,8 @@ var body = req.body, // body has username and password
 
 ```
 // ES6
-var { house, mouse} = $('body').data() // we'll get house and mouse variables
+// we'll get house and mouse variables
+var { house, mouse} = $('body').data()
 
 var {jsonMiddleware} = require('body-parser')
 
@@ -900,7 +901,9 @@ var messages = ids.map(function (value) {
 ```
 // ES6
 var ids = ['5632953c4e345e145fdf2df8','563295464e345e145fdf2df9']
-var messages = ids.map(value => `ID is ${value}`) // implicit return
+var messages = ids.map(
+  value => `ID is ${value}`
+) // implicit return
 ```
 
 
@@ -987,7 +990,7 @@ En el siguiente ejemplo, el resultado será 0.
 
 ```
 function calculateTotalAmount (vip) {
-  var amount = 0 // probably should also be let, but you can mix var and let
+  var amount = 0; // you can mix var and let
   if (vip) {
     let amount = 1 // first amount is still 0
   }
