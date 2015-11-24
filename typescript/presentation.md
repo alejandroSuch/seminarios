@@ -363,7 +363,7 @@ class Customer {
 
 ## Métodos
 
-Funciones que se ejecutan en el contexto de un objetos
+Funciones que se ejecutan en el contexto de un objeto
 
 ```
 class Customer {
@@ -424,7 +424,7 @@ class Lion extends Animal {
   }
 }
 
-Animal a = new Lion();
+var a:Animal = new Lion();
 ```
 
 
@@ -451,7 +451,7 @@ Son funciones que modifican una clase, propiedad, método o parámetro de un mé
 
 Su sintaxis es una <code>@</code> seguida de una función.
 
-Ampliamente utilizado en Angular2
+Ampliamente utilizado en [Angular2](https://angular.io)
 
 
 ```
