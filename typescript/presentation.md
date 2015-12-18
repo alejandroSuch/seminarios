@@ -1137,7 +1137,7 @@ La opción `-w` escucha cambios en el proyecto indicado con `-p project` y sus s
 [http://definitelytyped.org](http://definitelytyped.org)
 
 
-## Ficheros .tsd
+## Ficheros .d.ts
 
 Ficheros de definición de tipos de TypeScript.
 
@@ -1148,9 +1148,33 @@ Nos permiten usar cualquier librería como si estuviera hecha en TypeScript.
 
 Repositorio de definiciones de tipos en TypeScript
 
-Las librerías y frameworks más comunes tienen sus .tsd's
+Las librerías y frameworks más comunes tienen sus ficheros de definición
 
 Tenemos el gestor de paquetes `tsd`
+
+
+## ¿Qué pinta tiene un fichero .d.ts?
+
+```
+export default class Animal {
+    name: string;
+    age: number;
+    constructor(name: any, age: any);
+    greet(): void;
+}
+```
+
+```
+import Animal from './Animal';
+export default class Dog extends Animal {
+    constructor();
+}
+```
+
+
+## Los hay más chungos
+
+[https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master](https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master)
 
 
 ## AngularJS 1.x + TypeScript (I)
@@ -1222,6 +1246,8 @@ export module Services {
 
 ```
 /// <reference path="_all.d.ts" />
+declare var angular:angular.IAngularStatic;
+
 var myapp: ng.IModule = angular.module('app', ['ngRoute'])
 myapp.directive('directive', ScaffoldDirective.prototype.injection())
 
