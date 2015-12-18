@@ -2,7 +2,7 @@
 
 <i class="fa fa-smile-o"></i> Alejandro Such Berenguer
 
-<i class="fa fa-envelope-o"></i> alejandro.such@gcloud.ua.es
+<i class="fa fa-envelope-o"></i> asuch@grupoasv.com
 
 <i class="fa fa-twitter"></i> @alejandro_such
 
@@ -1121,6 +1121,116 @@ Podemos incluir un fichero `tsconfig.json` con las opciones que queremos para el
 La opción `-w` escucha cambios en el proyecto indicado con `-p project` y sus subcarpetas
 
 <img src="./img/watcher.png" style="min-width:100% !important; min-height:100% !important" />
+
+
+
+# Esto mola
+
+
+## Pero...
+
+### Con AngularJS 1.x no puedo utilizarlo, ¿no?
+
+
+# Incorrecto!!
+
+[http://definitelytyped.org](http://definitelytyped.org)
+
+
+## Ficheros .tsd
+
+Ficheros de definición de tipos de TypeScript.
+
+Nos permiten usar cualquier librería como si estuviera hecha en TypeScript.
+
+
+## DefinitelyTyped
+
+Repositorio de definiciones de tipos en TypeScript
+
+Las librerías y frameworks más comunes tienen sus .tsd's
+
+Tenemos el gestor de paquetes `tsd`
+
+
+## AngularJS 1.x + TypeScript (I)
+
+```
+$ tsd query angular --resolve --action install
+```
+
+
+## Directiva
+
+```
+/// <reference path='../_all.ts' />
+
+module app {
+    'use strict'
+
+    export class ScaffoldDirective implements ng.IDirective {
+
+    	public injection(): Array<any> {
+            return [
+                () => {
+                    return new ScaffoldDirective()
+                }
+            ]
+        }
+
+        public templateUrl: string
+    	  public restrict: string
+
+        constructor() {
+            this.templateUrl = 'partials/templates/directive.html'
+            this.restrict = 'E'
+        }
+
+        public link ($scope: ng.IScope, element: JQuery, attributes: ng.IAttributes): void {
+            element.text("i'm a directive")
+        }
+
+    }
+
+}
+```
+
+
+## Servicio
+
+```
+export module Services {
+    export interface ICustomerDataService {
+      getCustomer(id: number): ng.IPromise<Models.ICustomer>;
+    }
+
+    export class CustomerDataService implements ICustomerDataService {
+      constructor(private $http: ng.IHttpService, private $q: ng.IQService) {
+    }
+
+    getCustomer(id: number): ng.IPromise<Models.ICustomer> {
+      return this.$http.get('data/Customer.json').then((response) => {
+        return response.data;
+      });
+    }
+  }
+}
+```
+
+
+## Módulo
+
+```
+/// <reference path="_all.d.ts" />
+var myapp: ng.IModule = angular.module('app', ['ngRoute'])
+myapp.directive('directive', ScaffoldDirective.prototype.injection())
+
+myapp.config(['$routeProvider', function($routeProvider: ng.route.IRouteProvider) {
+   $routeProvider
+     .when('/home', {templateUrl: 'partials/home.html'})
+     .otherwise({redirectTo: '/home'})
+}])
+```
 
 
 
