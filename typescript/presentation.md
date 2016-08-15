@@ -2,8 +2,6 @@
 
 <i class="fa fa-smile-o"></i> Alejandro Such Berenguer
 
-<i class="fa fa-envelope-o"></i> asuch@grupoasv.com
-
 <i class="fa fa-twitter"></i> @alejandro_such
 
 
